@@ -15,3 +15,8 @@ Step 2. Add the dependency
 	dependencies {
 	        compile 'com.github.wslblb:annutils:1.0'
 	}
+
+用法
+
+在属性上加@BindField（ID）
+然后在setContentView调用后，属性使用前调用BIndViews.bind(this)
