@@ -46,15 +46,6 @@ public class BindViews {
             }
         }
 
-        Method[] methods = activityClass.getDeclaredMethods();    //返回所有方法，包括私有的
-        for(int i=0;i<methods.length;i++){
-            final Method method = methods[i];
-            method.setAccessible(true);                         //暴力反射，设置可访问
-            BindClick bindClick = method.getAnnotation(BindClick.class);  //获取方法上的注解
-            if(bindClick == null){
-                continue;
-            }
-            int clickId = bindClick.value();
-        }
+        
     }
 }
